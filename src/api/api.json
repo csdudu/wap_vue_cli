@@ -1,0 +1,246 @@
+{
+  "api_site_info":{
+    "tit":"下渔口镇卫生院",
+    "list1":["今日流量:XXXX", "今日开机:XXXX", "今日运行:XXXX", "今日能耗:XXXX"],
+    "list2":["昨日流量:XXXX", "昨日开机:XXXX", "昨日运行:XXXX", "昨日能耗:XXXX"],
+    "list3":["A:XXX", "B:XXX", "C:XXX"],
+    "list4":[
+      "A:XXX",
+      "B:XXX",
+      "C:XXX"
+    ],
+    "list5":[
+      "相序：正常",
+      "功因：XXX",
+      "功率：XXX"
+    ]
+
+  },
+
+  "api_videos":{
+    "list":["images/vv1.png", "images/vv1.png"]
+  },
+
+  "api_tab_info":{
+    "list":[
+      {
+        "tit":"提升泵",
+        "item1":["PLC控制输出：XX", "故障：XX", "本地远程：XX", "电源：XX", "运行：XX"],
+        "item2":["闲置时间：XX小时", "当次运行时间：XX小时", "今日运行时间：XX小时", "昨日运行时间：XX小时", "总运行时间：XX小时", "今日开机次数：XX", "昨日开机次数：XX", "总开机次数：XX"],
+        "item3":["鼓风机组停机时间：XX小时", "鼓风机组运行时间：XX小时", "加药机运行时长：XX小时"]
+      },
+      {
+        "tit":"1#风机",
+        "item1":["PLC控制输出：XX", "故障：XX", "本地远程：XX", "电源：XX", "运行：XX"],
+        "item2":["闲置时间：XX小时", "当次运行时间：XX小时", "今日运行时间：XX小时", "昨日运行时间：XX小时", "总运行时间：XX小时", "今日开机次数：XX", "昨日开机次数：XX", "总开机次数：XX"],
+        "item3":["鼓风机组停机时间：XX小时", "鼓风机组运行时间：XX小时", "加药机运行时长：XX小时"]
+      },
+      {
+        "tit":"2#风机",
+        "item1":["PLC控制输出：XX", "故障：XX", "本地远程：XX", "电源：XX", "运行：XX"],
+        "item2":["闲置时间：XX小时", "当次运行时间：XX小时", "今日运行时间：XX小时", "昨日运行时间：XX小时", "总运行时间：XX小时", "今日开机次数：XX", "昨日开机次数：XX", "总开机次数：XX"],
+        "item3":["鼓风机组停机时间：XX小时", "鼓风机组运行时间：XX小时", "加药机运行时长：XX小时"]
+      },
+      {
+        "tit":"回流泵",
+        "item1":["PLC控制输出：XX", "故障：XX", "本地远程：XX", "电源：XX", "运行：XX"],
+        "item2":["闲置时间：XX小时", "当次运行时间：XX小时", "今日运行时间：XX小时", "昨日运行时间：XX小时", "总运行时间：XX小时", "今日开机次数：XX", "昨日开机次数：XX", "总开机次数：XX"],
+        "item3":["鼓风机组停机时间：XX小时", "鼓风机组运行时间：XX小时", "加药机运行时长：XX小时"]
+      },
+      {
+        "tit":"加药泵",
+        "item1":["PLC控制输出：XX", "故障：XX", "本地远程：XX", "电源：XX", "运行：XX"],
+        "item2":["闲置时间：XX小时", "当次运行时间：XX小时", "今日运行时间：XX小时", "昨日运行时间：XX小时", "总运行时间：XX小时", "今日开机次数：XX", "昨日开机次数：XX", "总开机次数：XX"],
+        "item3":["鼓风机组停机时间：XX小时", "鼓风机组运行时间：XX小时", "加药机运行时长：XX小时"]
+      }
+    ]
+  },
+
+  "api_qtrz_txt":{
+    "list":[
+      {"tit":"2019/1/1 9:00 加药机","flag":0},
+      {"tit":"2019/1/1 7:00 1号风机","flag":0},
+      {"tit":"2019/1/1 7:00 2号风机","flag":0},
+      {"tit":"2019/1/1 19:00 加药机","flag":1},
+      {"tit":"2019/1/1 17:00 1号风机","flag":1},
+      {"tit":"2019/1/1 17:00 2号风机","flag":1},
+      {"tit":"2019/1/1 17:00 提升泵","flag":1}
+    ]
+  },
+
+  "api_yxtj_chart":{
+    "legend": {},
+        "tooltip": {},
+        "dataset": {
+            "source": [
+                ["product", "2015", "2016", "2017"],
+                ["Matcha Latte", 43.3, 85.8 ],
+                ["Milk Tea", 83.1, 73.4],
+                ["Cheese Cocoa", 86.4, 65.2],
+                ["Walnut Brownie", 72.4, 53.9]
+            ]
+        },
+        "xAxis": {"type": "category"},
+        "yAxis": {},
+        "series": [
+            {"type": "bar"},
+            {"type": "bar"}
+        ]
+    },
+
+
+  "api_qtrz_chart":{
+    
+
+    "tooltip" : {
+        "trigger": "axis",
+        "axisPointer" : {"type" : "shadow"}
+    },
+    "legend": {
+        "data": ["启动", "停止"]
+    },
+    "grid": {
+        "left": "3%",
+        "right": "4%",
+        "bottom": "3%",
+        "containLabel": true
+    },
+    "xAxis":  {
+        "type": "value"
+    },
+    "yAxis": {
+        "type": "category",
+        "data": ["加药机","回流泵","风机","提升泵"]
+    },
+    "series": [
+        {
+            "name": "直接访问",
+            "type": "bar",
+            "stack": "总量",
+            "label": {
+                "normal": {
+                    "show": true,
+                    "position": "insideRight"
+                }
+            },
+            "data": [3, 4, 6, 1]
+        },
+        {
+            "name": "邮件营销",
+            "type": "bar",
+            "stack": "总量",
+            "label": {
+                "normal": {
+                    "show": true,
+                    "position": "insideRight"
+                }
+            },
+            "data": [5, 6, 7, 8]
+        }
+    ]
+    
+  },
+
+  "dd1":{
+    "tit":1,
+    "option":{
+       "xAxis": {
+           "type": "category",
+           "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       },
+       "yAxis": {
+           "type": "value"
+       },
+       "series": [{
+           "data": [1320, 932, 201, 934, 1290, 0, 0],
+           "type": "line"
+       }]
+    }
+  },
+
+  "dd2":{
+    "tit":2,
+    "option":{
+       "xAxis": {
+           "type": "category",
+           "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       },
+       "yAxis": {
+           "type": "value"
+       },
+       "series": [{
+           "data": [0, 1200, 0, 934, 1290, 1330, 1320],
+           "type": "line"
+       }]
+    }
+  },
+
+  "dd3":{
+    "tit":3,
+    "option":{
+       "xAxis": {
+           "type": "category",
+           "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       },
+       "yAxis": {
+           "type": "value"
+       },
+       "series": [{
+           "data": [1000, 1500, 0, 934, 1290, 1330, 1320],
+           "type": "line"
+       }]
+    }
+  },
+
+  "dd4":{
+    "tit":4,
+    "option":{
+       "xAxis": {
+           "type": "category",
+           "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       },
+       "yAxis": {
+           "type": "value"
+       },
+       "series": [{
+           "data": [1200, 0, 800, 934, 0, 1330, 1320],
+           "type": "line"
+       }]
+    }
+  },
+
+  "dd5":{
+    "tit":5,
+    "option":{
+       "xAxis": {
+           "type": "category",
+           "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       },
+       "yAxis": {
+           "type": "value"
+       },
+       "series": [{
+           "data": [1500, 500, 0, 934, 1290, 1330, 1320],
+           "type": "line"
+       }]
+    }
+  },
+
+  "dd6":{
+    "tit":6,
+    "option":{
+       "xAxis": {
+           "type": "category",
+           "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+       },
+       "yAxis": {
+           "type": "value"
+       },
+       "series": [{
+           "data": [500, 1200, 800, 934, 0, 1330, 1320],
+           "type": "line"
+       }]
+    }
+  }
+  
+}

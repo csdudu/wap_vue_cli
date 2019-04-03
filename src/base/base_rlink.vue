@@ -1,0 +1,11 @@
+<template>
+  <router-link :to="href"><slot></slot></router-link>
+</template>
+
+<script>
+export default {
+  name: 'rlink',
+  props: ["href"]
+}
+</script>
+

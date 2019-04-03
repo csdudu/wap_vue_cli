@@ -1,0 +1,37 @@
+/* 用于重置element-ui样式 */
+.el-tabs__item {
+    padding: 0 20px;
+    height: 35px;
+    line-height: 30px;
+    color: #fff;
+    background-color: none;
+}
+
+.el-tabs__item.is-active {
+    color: #3fe772
+}
+
+.el-tabs__header {
+    margin: 0 0 5px;
+}
+
+.el-dialog {
+	background: $c3;
+	border: 1px $c2 solid;
+	border-radius: 10px;
+
+    -webkit-box-shadow: 0 1px 3px $c1;
+    box-shadow: 0 1px 3px $c1;
+}
+
+.el-dialog__header {
+    padding: 0px 20px 0px;
+}
+
+.el-dialog__headerbtn {
+    top: 6px;
+    right: 6px;
+    font-size: 24px;
+}
+
+.el-progress-circle__track{opacity: 0.1;}

@@ -1,0 +1,21 @@
+$c1:#a1f9ff;
+$c2:#0a7bc3;
+$c3:#131b38;
+$c4:#1c3b99;
+$c5:#1b284b;
+
+$cc1:#ed7e30;
+
+
+
+@function vv($px) {
+    @return ($px / 375) * 100vw;
+}
+
+@mixin ell($row){  
+    overflow : hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+}  
