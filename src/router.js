@@ -9,14 +9,6 @@ export default new Router({
     // {path: '*', component: page404},
     {path: '/', redirect: '/home' },
     {path: '/home', name: 'home', component: home },
-    {path: '/login', name: 'login', component: () => import('./views/login.vue') },
-    {
-    	path: '/test2',
-    	name: 'test2',
-    	meta: { 
-	        requiresAuth: true 
-	    },
-    	component: () => import('./views/test2.vue') 
-    }
+    {path: '/list', name: 'list', component: () => import('./views/list.vue') }
   ]
 })

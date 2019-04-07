@@ -1,37 +1,40 @@
 import moment from 'moment'
-import du_rect from '../components/du_rect';
-import du_date_picker from '../components/du_date_picker';
-import du_anim_bar from '../components/du_anim_bar';
-import rlink from '../base/base_rlink.vue';
+import rlink from '../components/rlink.vue';
+import du_toast from '../components/du_toast.vue';
+import du_pop from '../components/du_pop.vue';
 import test from '../components/test';
 import api_server from './request.js';
+// import DATA from '/data/data.js';
 
-Vue.component('du_rect', du_rect);
-Vue.component('du_date_picker', du_date_picker);
-Vue.component('du_anim_bar', du_anim_bar);
+
 Vue.component('rlink', rlink);
-Vue.component('test', test);
+Vue.component('du_toast', du_toast);
+Vue.component('du_pop', du_pop);
 
 Vue.mixin({
   data: function() {
     return {
-      main_tit: this.$main_tit
+      main_tit: this.$main_tit,
+      main_data: [],
+      
     }
   },
   methods: {
-    
-    
+    toast(str) {
+      this.$refs.du_toast.show(str);
+    },
+  },
+  computed: {
+    is_long_scr: function () {
+      var ratio = (document.body.clientHeight / document.body.clientWidth).toFixed(2);
+      console.log(ratio,"是否长屏:",ratio>1.6 ? true:false);
+      return ratio > 1.6 ? true : false
+    }
   }
 })
 
 // 登录判断
-export const auth = {
-  loggedIn(){
-    
-    
-    return false;
-  }
-}
+// export const data = DATA;
 
 export const common = {
   install: function (Vue, options) {
@@ -69,12 +72,8 @@ export const common = {
     };
 
     // 所有的枚举， 这种方式同样可以替代过滤器
-    Vue.prototype.$main_tit = "博方环保智能云控平台";
+    Vue.prototype.$main_tit = "浦市古镇";
     Vue.prototype.$today = moment().format("YYYY-MM-DD");
-    Vue.prototype.$industryId = "5";
-    Vue.prototype.$placeIdQUERY = "23";
-    Vue.prototype.$interval = 6000;
-    // Vue.prototype.$token = "vukIYOFoWurjnylmEpJv";
   }
 }
 

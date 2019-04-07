@@ -2,8 +2,8 @@
 
 import axios from 'axios';
 
-// const ROOT_PROD = "http://www.lingsitech.net/api";
-const ROOT_PROD = "https://easy-mock.com/mock/5c70d363d1144c6946b8bf81/smart_cloud";
+const ROOT_PROD = "/";
+// const ROOT_PROD = "https://easy-mock.com/mock/5c70d363d1144c6946b8bf81/smart_cloud";
 // const TOKEN = window.localStorage.getItem("token");
 const TOKEN = "vukIYOFoWurjnylmEpJv";
 
@@ -66,7 +66,7 @@ api_server.interceptors.response.use(function (res) {
           break;
 
         default:
-            return res.data.data;
+            return res.data;
     }
   
 }, function (error) {

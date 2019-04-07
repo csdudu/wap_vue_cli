@@ -1,31 +1,20 @@
 <template>
   <div id="app">
-    <el-scrollbar style="width: 100%;height: 1080px;"> <!-- 滚动条 -->
-        <keep-alive>
-          <router-view></router-view>
-        </keep-alive>
-    </el-scrollbar>
-    
+    <keep-alive>
+      <router-view></router-view>
+    </keep-alive>
   </div>
 </template>
-<script>
 
+<script>
 export default {
-  components: {
-    
-  },
+  components: {},
   data: function() {
-    return {
-      
-    }},
-    methods: {
-    },
+    return {};
+  },
+  methods: {},
   created: function() {
     document.title = this.$main_tit;
   }
-}
+};
 </script>
-
-<style lang="scss">
-  #app{min-height: 100%;}
-</style>

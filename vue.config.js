@@ -2,39 +2,42 @@ const path = require('path');
 const _ = require('lodash');
 const webpack = require('webpack')
 
-const appData = require('./src/api/api.json');
+// const appData = require('./src/api/api.json');
 
 const cdn = {
   // 开发环境
   dev: {
     css: [
-      
+      '/css/swiper.min.css',
+      '/css/animate.min.css',
     ],
     js: [
       '/js/vue.js',
       '/js/vue-router.min.js',
       '/js/AXIOS.min.js',
       '/js/lodash.min.js',
-      '/js/element.min.js',
-      '/js/echarts.min.js'
+      '/js/ydui.flexible.js',
+      '/js/swiper.min.js',
+      '/js/swiper.animate1.0.3.min.js',
+      'http://api.map.baidu.com/api?v=2.0&ak=eg39Pnyac2tiDPymRDL5aHGmGXG2sAxk',
     ]
   },
   // 生产环境
   build: {
     css: [
-      'https://unpkg.com/element-ui/lib/theme-chalk/index.css',
-      'https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css'
+      '/css/swiper.min.css',
+      '/css/animate.min.css',
     ],
     js: [
       'https://cdn.bootcss.com/vue/2.5.21/vue.min.js',
       'https://cdn.bootcss.com/vue-router/3.0.2/vue-router.min.js',
-      'https://cdn.bootcss.com/vuex/3.0.1/vuex.min.js',
       'https://cdn.bootcss.com/axios/0.18.0/axios.min.js',
-      'https://unpkg.com/element-ui/lib/index.js',
-      'https://cdn.bootcss.com/echarts/4.2.1-rc1/echarts.min.js',
-      'https://cdn.bootcss.com/js-cookie/2.2.0/js.cookie.min.js',
       'https://cdn.bootcss.com/lodash.js/4.17.12-pre/lodash.min.js',
-      'https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js'
+      'https://cdn.bootcss.com/moment.js/2.24.0/moment.min.js',
+      'js/ydui.flexible.js',
+      'js/swiper.min.js',
+      'js/swiper.animate1.0.3.min.js',
+      'http://api.map.baidu.com/api?v=2.0&ak=eg39Pnyac2tiDPymRDL5aHGmGXG2sAxk',
     ]
   }
 }
@@ -54,10 +57,10 @@ module.exports = {
     myConfig.externals = {
       'vue': 'Vue',
       'vue-router': 'VueRouter',
+      'swiper': 'Swiper',
+      'moment': 'moment',
       'axios': 'axios',
-      'lodash': '_',
-      'echarts': 'echarts',
-      'element-ui': 'ELEMENT'
+      'lodash': '_'
     }
     if (process.env.NODE_ENV === 'production') {
       // 1. 生产环境npm包转CDN
@@ -130,50 +133,7 @@ module.exports = {
         console.log("devServer >>>>>>>>>",rand);
         res.json(appData["dd"+rand])
       });
-
-      app.get('/api_site_info', function (req, res) {
-        res.json(appData["api_site_info"])
-      });
-
-      //启停-文字
-      app.get('/api_qtrz_txt', function (req, res) {
-        res.json(appData["api_qtrz_txt"])
-      });
-
-      //启停-柱状图
-      app.get('/api_qtrz_chart', function (req, res) {
-        res.json(appData["api_qtrz_chart"])
-      });
-
-      app.get('/api_yxtj_chart', function (req, res) {
-        res.json(appData["api_yxtj_chart"])
-      });
-
-      app.get('/api_videos', function (req, res) {
-        res.json(appData["api_videos"])
-      });
-
-      app.get('/api_tab_info', function (req, res) {
-        res.json(appData["api_tab_info"])
-      });*/
-    }
-  },
-
-  css: {
-    loaderOptions: {
-      stylus: {
-        'resolve url': true,
-        'import': [
-          './src/theme'
-        ]
-      }
-    }
-  },
-
-  pluginOptions: {
-    'cube-ui': {
-      postCompile: true,
-      theme: true
+*/
     }
   }
 }
