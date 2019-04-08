@@ -266,6 +266,9 @@
     },
     
     mounted: function () {
+       console.log("-------", process.env.VUE_APP_DESC, process.env.NODE_ENV,
+       "------",this.$main_tit)
+      
       this.get_current_position();
       this.$get("data/data.json").then(
         (res)=> {

@@ -19,6 +19,7 @@ const cdn = {
       '/js/ydui.flexible.js',
       '/js/swiper.min.js',
       '/js/swiper.animate1.0.3.min.js',
+      '/js/moment.min.js',
       'http://api.map.baidu.com/api?v=2.0&ak=eg39Pnyac2tiDPymRDL5aHGmGXG2sAxk',
     ]
   },
@@ -118,7 +119,7 @@ module.exports = {
       return args
     })
 
-    console.log("-----------------------");
+    console.log("-----------------------", process.env.VUE_APP_DESC, process.env.NODE_ENV, "-----------------------");
     /*moment仅包含特定语言包的moment文件*/
     config.plugin('context')
       .use(webpack.ContextReplacementPlugin,

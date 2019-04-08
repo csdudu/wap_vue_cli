@@ -36,8 +36,12 @@ export default {
   computed: {},
 
   methods: {},
-  created: function() {
-    console.log(this.main_data);
+  mounted() {
+    this.$get("data/data.json").then(
+        (res)=> {
+          this.main_data = res.list;
+        }
+      );
   }
 };
 </script>

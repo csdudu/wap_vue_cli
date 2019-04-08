@@ -2,7 +2,6 @@ import moment from 'moment'
 import rlink from '../components/rlink.vue';
 import du_toast from '../components/du_toast.vue';
 import du_pop from '../components/du_pop.vue';
-import test from '../components/test';
 import api_server from './request.js';
 // import DATA from '/data/data.js';
 

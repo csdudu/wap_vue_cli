@@ -6,6 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "report": "vue-cli-service build --report",
+    "dudu": "vue-cli-service serve --mode dudu",
     "pro": "vue-cli-service serve --project-mode pro",
     "pre": "vue-cli-service serve --project-mode pre"
   },
@@ -31,7 +32,6 @@
     "sass-loader": "^7.0.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
-    "swiper": "^4.5.0",
     "vue-template-compiler": "^2.5.17"
   },
   "postcss": {
